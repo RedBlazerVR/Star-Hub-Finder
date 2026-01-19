@@ -6,9 +6,9 @@ import os
 
 # 1. SETUP FROM RAILWAY VARIABLES
 # These names must match exactly what you typed in the Railway Variables tab
-TOKEN = os.getenv("MTQ2MjkwNTcxNDIwMzk1MTI4OQ.Gph5ZG.Urr_qC1oVh_nNb_TZz7c0-hRJHbw6ly76kbLhc")
+TOKEN = os.getenv("DISCORD_TOKEN")
 # We use int() because Discord IDs are numbers, but environment variables are strings
-CHANNEL_ID = int(os.getenv("1460395001078092022")) 
+CHANNEL_ID = int(os.getenv("CHANNEL_ID")) 
 
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.default())
 app = Flask(__name__)
