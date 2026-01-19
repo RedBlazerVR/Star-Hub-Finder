@@ -29,7 +29,7 @@ def roblox_log():
     
     if channel:
         embed = discord.Embed(
-            title="NovaHub Notifier",
+            title="Star Hub Notifier",
             description="A new server has been indexed.",
             color=0x007bff
         )
