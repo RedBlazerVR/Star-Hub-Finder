@@ -53,12 +53,9 @@ def run_flask():
 
 if __name__ == "__main__":
     if not TOKEN:
-        print("❌ CRITICAL ERROR: DISCORD_TOKEN is not set in Railway Variables!")
+        print("❌ TOKEN MISSING")
     else:
-        # Start Flask in a separate thread
-        print(f"🚀 Starting Web Server on Port {PORT}...")
-        threading.Thread(target=run_flask, daemon=True).start()
-        
-        # Start the Bot
-        print("🤖 Connecting to Discord...")
+        # Run Flask in the background
+        threading.Thread(target=lambda: app.run(host='0.0.0.0', port=PORT, use_reloader=False), daemon=True).start()
+        # Run Bot in the foreground
         bot.run(TOKEN)
