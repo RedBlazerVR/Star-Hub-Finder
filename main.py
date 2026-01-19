@@ -38,7 +38,7 @@ def roblox_log():
     channel = bot.get_channel(int(CHANNEL_ID_RAW))
     if channel:
         # Blue color 0x007bff matches the image provided
-        embed = discord.Embed(title="NovaHub Notifier", color=0x007bff)
+        embed = discord.Embed(title="Star Hub Notifier", color=0x007bff)
         
         # 'Name' field for the vertical list of players
         embed.add_field(name="Name", value=player_list, inline=False)
